@@ -112,6 +112,9 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
   <img src="assets/thongbaokeq.png" alt="Kết quả" width="500"/>
 </p>
 <p align="center">
+  <img src="assets/Thongbaohoaco.png" alt="Kết quả" width="500"/>
+</p>
+<p align="center">
   <em> Hình 6: Popup kết quả trận đấu </em>
 </p>
 
