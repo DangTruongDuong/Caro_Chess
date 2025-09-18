@@ -56,7 +56,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 </p>
 
 <p align="center">
-  <img src="asstest/dangnhap.png" alt="Màn hình đăng ký" width="500"/>
+  <img src="assets/dangnhap.png" alt="Màn hình đăng ký" width="500"/>
 </p>
 <p align="center">
   <em> Hình 1.1: Màn hình đăng ký (RegisterFrame) </em>
