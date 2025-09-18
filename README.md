@@ -120,14 +120,14 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - `match_history.csv`: Lưu player1,player2,result,timestamp,player1Score,player2Score.
 
 <p align="center">
-  <img src="assets/users_file.png" alt="File users" width="500"/>
+  <img src="assets/lichsudata.png" alt="File users" width="500"/>
 </p>
 <p align="center">
   <em> Hình 7: File lưu trữ tài khoản người dùng </em>
 </p>
 
 <p align="center">
-  <img src="assets/match_history_file.png" alt="File match history" width="500"/>
+  <img src="assets/lichsudata.png" alt="File match history" width="500"/>
 </p>
 <p align="center">
   <em> Hình 8: File lưu trữ lịch sử trận đấu </em>
