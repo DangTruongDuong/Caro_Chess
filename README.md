@@ -49,14 +49,14 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Nhập username/password, kiểm tra regex (username: 3-20 ký tự chữ cái/số/underscore; password: ít nhất 6 ký tự với chữ hoa/thường/số/ký tự đặc biệt).
 
 <p align="center">
-  <img src="docs/login_screen.png" alt="Màn hình đăng nhập" width="500"/>
+  <img src="asstest/dangnhap.png" alt="Màn hình đăng nhập" width="500"/>
 </p>
 <p align="center">
   <em> Hình 1: Màn hình đăng nhập (LoginFrame) </em>
 </p>
 
 <p align="center">
-  <img src="docs/register_screen.png" alt="Màn hình đăng ký" width="500"/>
+  <img src="asstest/dangnhap.png" alt="Màn hình đăng ký" width="500"/>
 </p>
 <p align="center">
   <em> Hình 1.1: Màn hình đăng ký (RegisterFrame) </em>
