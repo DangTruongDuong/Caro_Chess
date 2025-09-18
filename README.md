@@ -49,14 +49,14 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Nhập username/password, kiểm tra regex (username: 3-20 ký tự chữ cái/số/underscore; password: ít nhất 6 ký tự với chữ hoa/thường/số/ký tự đặc biệt).
 
 <p align="center">
-  <img src="assets/dangnhap.png" alt="Màn hình đăng nhập" width="500"/>
+  <img src="assets/dangnhap.png" alt="Màn hình đăng nhập" width="400"/>
 </p>
 <p align="center">
   <em> Hình 1: Màn hình đăng nhập (LoginFrame) </em>
 </p>
 
 <p align="center">
-  <img src="assets/dangky.png" alt="Màn hình đăng ký" width="500"/>
+  <img src="assets/dangky.png" alt="Màn hình đăng ký" width="400"/>
 </p>
 <p align="center">
   <em> Hình 1.1: Màn hình đăng ký (RegisterFrame) </em>
@@ -66,7 +66,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Chọn tên hiển thị, nút Tạo Phòng (server), Tham Gia Phòng (client với IP/Port), Xem Lịch Sử Đấu.
 
 <p align="center">
-  <img src="docs/menu.png" alt="Màn hình menu" width="500"/>
+  <img src="assets/menu.png" alt="Màn hình menu" width="400"/>
 </p>
 <p align="center">
   <em> Hình 2: Menu chính (GameMenu) </em>
@@ -76,10 +76,10 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Hiển thị thông tin IP/Port để chia sẻ, chờ client kết nối.
 
 <p align="center">
-  <img src="chuanbitaophong" alt="Phòng chờ" width="500"/>
+  <img src="assets/chuanbitaophong" alt="Phòng chờ" width="400"/>
 </p>
 <p align="center">
-  <img src="chotaophong" alt="Phòng chờ" width="500"/>
+  <img src="assets/chotaophong" alt="Phòng chờ" width="400"/>
 </p>
 <p align="center">
   <em> Hình 3: Phòng chờ khi tạo server (WaitingRoomFrame) </em>
