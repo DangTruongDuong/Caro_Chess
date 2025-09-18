@@ -138,17 +138,22 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 
 ## 4. Cài đặt & chạy chương trình
 - Bước 1: Chuẩn bị môi trường
+    - Cài đặt Eclipse IDE for Java Developers (hoặc phiên bản Eclipse hỗ trợ Java).
     - Cài đặt Java JDK 8+.
-    - Kiểm tra bằng lệnh: `java -version`.
-- Bước 2: Biên dịch chương trình
-    - Mở terminal ở thư mục gốc dự án.
-    - Biên dịch: `javac caro/*.java` (hoặc sử dụng IDE như Eclipse/IntelliJ để build).
-- Bước 3: Khởi chạy chương trình
-    - Chạy login frame (làm client hoặc server): `java caro.LoginFrame`.
-    - Đăng nhập/đăng ký tài khoản.
-    - Vào menu: Chọn "Tạo Phòng" để làm server (port mặc định 12345, chia sẻ IP cho người khác).
-    - Hoặc "Tham Gia Phòng": Nhập IP/Port của server để kết nối.
-    - Hoặc "Xem Lịch Sử Đấu": Xem thống kê và lịch sử các trận đấu đã chơi.
+    - Kiểm tra JDK bằng lệnh trong terminal: `java -version`.
+- Bước 2: Thiết lập dự án trong Eclipse
+    - Mở Eclipse, chọn **File > New > Java Project**.
+    - Đặt tên dự án (ví dụ: `TicTacToe`) và nhấn **Finish**.
+    - Sao chép thư mục `caro` chứa các file mã nguồn (`LoginFrame.java`, `RegisterFrame.java`, `GameMenu.java`, `Server.java`, `Client.java`, `XOGame.java`) vào thư mục dự án trong Eclipse.
+    - Nhấn chuột phải vào dự án trong **Package Explorer**, chọn **Refresh** để cập nhật các file.
+- Bước 3: Chạy chương trình
+    - Trong Eclipse, mở file `caro/LoginFrame.java`.
+    - Nhấn chuột phải vào file, chọn **Run As > Java Application** để khởi động màn hình đăng nhập.
+    - Đăng nhập hoặc đăng ký tài khoản.
+    - Trong menu chính:
+        - Chọn **Tạo Phòng** để làm server (port mặc định 12345, chia sẻ IP cho người khác).
+        - Hoặc chọn **Tham Gia Phòng**, nhập IP/Port của server để kết nối.
+        - Hoặc chọn **Xem Lịch Sử Đấu** để xem thống kê và lịch sử các trận đấu.
 - Bước 4: Chơi game
     - Hai người chơi kết nối sẽ bắt đầu game tự động.
     - Luân phiên click vào ô bàn cờ để đánh X/O.
@@ -156,6 +161,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 - Lưu ý:
     - Chạy trên cùng mạng LAN để kết nối IP.
     - Nếu lỗi kết nối, kiểm tra firewall hoặc port 12345.
-    - File `users.csv` và `match_history.csv` được tạo tự động nếu chưa tồn tại.
+    - File `users.csv` và `match_history.csv` được tạo tự động trong thư mục dự án nếu chưa tồn tại.
+    - Đảm bảo Eclipse được cấu hình đúng JDK trong **Preferences > Java > Installed JREs**.
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
