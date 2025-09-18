@@ -19,45 +19,52 @@
 
 </div>
 
-
 ## 1. Giới thiệu hệ thống
 
-Hệ thống Game Tic Tac Toe (Caro 3x3) được phát triển theo mô hình Client-Server, hỗ trợ chơi multiplayer trực tuyến qua mạng LAN. Người chơi có thể đăng nhập/đăng ký tài khoản, chọn chế độ tạo phòng (làm server) hoặc tham gia phòng (làm client), và chơi game với đối thủ. Game sử dụng bàn cờ 3x3 với luật chơi chuẩn: X/O luân phiên, thắng khi có 3 ký tự thẳng hàng, hỗ trợ đầu hàng, chơi lại, và thoát game.
+Hệ thống Game Tic Tac Toe (Caro 3x3) được phát triển theo mô hình Client-Server, hỗ trợ chơi multiplayer trực tuyến qua mạng LAN. Người chơi có thể đăng nhập/đăng ký tài khoản, chọn chế độ tạo phòng (làm server) hoặc tham gia phòng (làm client), chơi game với đối thủ, và xem lịch sử đấu cũng như thống kê thắng/thua/hòa. Game sử dụng bàn cờ 3x3 với luật chơi chuẩn: X/O luân phiên, thắng khi có 3 ký tự thẳng hàng (ngang/dọc/chéo), hỗ trợ đầu hàng, chơi lại, và thoát game. Kết quả trận đấu được lưu trữ và cập nhật thống kê người dùng.
 
 **Chức năng chính**
-- Đăng nhập/Đăng ký tài khoản (lưu trữ trong file `users.txt` với định dạng username:password).
-- Menu chính: Chọn tên hiển thị, tạo phòng chờ (server) hoặc tham gia phòng bằng IP/Port.
-- Ghép cặp người chơi: Server chờ client kết nối, sau đó bắt đầu game.
-- Chơi Tic Tac Toe: Hiển thị lượt chơi, điểm số, vẽ đường thắng, xử lý thắng/thua/hòa.
+- Đăng nhập/Đăng ký tài khoản (lưu trữ trong file `users.csv` với định dạng username,password,wins,losses,draws).
+- Menu chính: Chọn tên hiển thị, tạo phòng chờ (server) hoặc tham gia phòng bằng IP/Port, xem lịch sử đấu.
+- Ghép cặp người chơi: Server chờ client kết nối, trao đổi tên hiển thị, sau đó bắt đầu game.
+- Chơi Tic Tac Toe: Hiển thị lượt chơi, điểm số, vẽ đường thắng, xử lý thắng/thua/hòa, đầu hàng, chơi lại.
 - Xử lý sự cố: Nếu một bên thoát, bên kia thắng; hỗ trợ chơi lại hoặc đầu hàng.
-- Giao diện đồ họa thân thiện với hiệu ứng hover, gradient background.
+- Lịch sử đấu: Lưu kết quả trận đấu trong `match_history.csv` (player1,player2,result,timestamp,player1Score,player2Score), hiển thị thống kê thắng/thua/hòa và bảng lịch sử.
+- Giao diện đồ họa thân thiện với hiệu ứng hover, gradient background, và cập nhật realtime.
 
-Dự án tập trung vào lập trình mạng (socket), giao diện Swing, và quản lý trạng thái game.
+Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quản lý trạng thái game, và lưu trữ dữ liệu CSV.
 
 ## 2. Công nghệ sử dụng
 - Ngôn ngữ lập trình: Java (JDK 8+).
-- Giao diện người dùng: Java Swing (JFrame, JButton, JLabel, JPanel, JPasswordField).
+- Giao diện người dùng: Java Swing (JFrame, JButton, JLabel, JPanel, JPasswordField, JTable cho lịch sử).
 - Truyền thông mạng: TCP Socket (ServerSocket cho server, Socket cho client).
-- Lưu trữ dữ liệu: File text (`users.txt` cho tài khoản người dùng).
+- Lưu trữ dữ liệu: File CSV (`users.csv` cho tài khoản và thống kê, `match_history.csv` cho lịch sử trận đấu).
 - Kiến trúc:
-    - Client: `LoginFrame.java` (đăng nhập), `RegisterFrame.java` (đăng ký), `GameMenu.java` (menu chính), `Client.java` (kết nối server), `XOGame.java` (giao diện game).
+    - Client: `LoginFrame.java` (đăng nhập), `RegisterFrame.java` (đăng ký), `GameMenu.java` (menu chính với WaitingRoomFrame và HistoryFrame), `Client.java` (kết nối server), `XOGame.java` (giao diện game).
     - Server: `Server.java` (khởi tạo server và phòng chờ), `XOGame.java` (quản lý game phía server).
-    - Các tính năng phụ: Thread cho lắng nghe đối thủ, DataInputStream/DataOutputStream cho trao đổi dữ liệu (move, name, reset, surrender).
+    - Các tính năng phụ: Thread cho lắng nghe đối thủ, DataInputStream/DataOutputStream cho trao đổi dữ liệu (move, name, reset, surrender, exit); BufferedReader/Writer cho xử lý CSV.
 
 ## 3. Hình ảnh các chức năng
 - Màn hình đăng nhập/đăng ký
-    - Nhập username/password, kiểm tra regex (ít nhất 3-20 ký tự, mật khẩu có chữ hoa/thường/số/ký tự đặc biệt).
-      
-  <p align="center">
+    - Nhập username/password, kiểm tra regex (username: 3-20 ký tự chữ cái/số/underscore; password: ít nhất 6 ký tự với chữ hoa/thường/số/ký tự đặc biệt).
+
+<p align="center">
   <img src="docs/login_screen.png" alt="Màn hình đăng nhập" width="500"/>
 </p>
 <p align="center">
   <em> Hình 1: Màn hình đăng nhập (LoginFrame) </em>
 </p>
 
+<p align="center">
+  <img src="docs/register_screen.png" alt="Màn hình đăng ký" width="500"/>
+</p>
+<p align="center">
+  <em> Hình 1.1: Màn hình đăng ký (RegisterFrame) </em>
+</p>
+
 - Màn hình menu chính
-    - Chọn tên hiển thị, nút Tạo Phòng (server) hoặc Tham Gia Phòng (client với IP/Port).
-      
+    - Chọn tên hiển thị, nút Tạo Phòng (server), Tham Gia Phòng (client với IP/Port), Xem Lịch Sử Đấu.
+
 <p align="center">
   <img src="docs/menu_screen.png" alt="Màn hình menu" width="500"/>
 </p>
@@ -67,7 +74,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, và q
 
 - Màn hình phòng chờ (khi tạo phòng)
     - Hiển thị thông tin IP/Port để chia sẻ, chờ client kết nối.
-      
+
 <p align="center">
   <img src="docs/waiting_room.png" alt="Phòng chờ" width="500"/>
 </p>
@@ -77,7 +84,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, và q
 
 - Màn hình chơi game
     - Bàn cờ 3x3, hiển thị tên người chơi, lượt đi, điểm số, nút chơi lại/đầu hàng/thoát.
-      
+
 <p align="center">
   <img src="docs/game_screen.png" alt="Màn hình game" width="500"/>
 </p>
@@ -85,24 +92,42 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, và q
   <em> Hình 4: Giao diện chơi game (XOGame) với đường thắng </em>
 </p>
 
+- Màn hình lịch sử đấu
+    - Hiển thị thống kê thắng/thua/hòa và bảng lịch sử các trận đấu của người chơi.
+
+<p align="center">
+  <img src="docs/history_screen.png" alt="Lịch sử đấu" width="500"/>
+</p>
+<p align="center">
+  <em> Hình 5: Màn hình lịch sử đấu (HistoryFrame) </em>
+</p>
+
 - Thông báo kết quả
     - Popup hiển thị thắng/thua/hòa, cập nhật điểm số.
-      
+
 <p align="center">
   <img src="docs/result_popup.png" alt="Kết quả" width="500"/>
 </p>
 <p align="center">
-  <em> Hình 5: Popup kết quả trận đấu </em>
+  <em> Hình 6: Popup kết quả trận đấu </em>
 </p>
 
-- File lưu trữ 
-    - `users.txt`: Lưu username:password (ví dụ: admin:Password123!).
-      
+- File lưu trữ
+    - `users.csv`: Lưu username,password,wins,losses,draws.
+    - `match_history.csv`: Lưu player1,player2,result,timestamp,player1Score,player2Score.
+
 <p align="center">
   <img src="docs/users_file.png" alt="File users" width="500"/>
 </p>
 <p align="center">
-  <em> Hình 6: File lưu trữ tài khoản người dùng </em>
+  <em> Hình 7: File lưu trữ tài khoản người dùng </em>
+</p>
+
+<p align="center">
+  <img src="docs/match_history_file.png" alt="File match history" width="500"/>
+</p>
+<p align="center">
+  <em> Hình 8: File lưu trữ lịch sử trận đấu </em>
 </p>
 
 ## 4. Cài đặt & chạy chương trình
@@ -117,15 +142,14 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, và q
     - Đăng nhập/đăng ký tài khoản.
     - Vào menu: Chọn "Tạo Phòng" để làm server (port mặc định 12345, chia sẻ IP cho người khác).
     - Hoặc "Tham Gia Phòng": Nhập IP/Port của server để kết nối.
+    - Hoặc "Xem Lịch Sử Đấu": Xem thống kê và lịch sử các trận đấu đã chơi.
 - Bước 4: Chơi game
     - Hai người chơi kết nối sẽ bắt đầu game tự động.
     - Luân phiên click vào ô bàn cờ để đánh X/O.
-    - Khi kết thúc, kết quả hiển thị; có thể chơi lại hoặc thoát.
-- Lưu ý: 
+    - Khi kết thúc, kết quả hiển thị; có thể chơi lại, đầu hàng, hoặc thoát.
+- Lưu ý:
     - Chạy trên cùng mạng LAN để kết nối IP.
     - Nếu lỗi kết nối, kiểm tra firewall hoặc port 12345.
-    - Không có lưu lịch sử trận đấu (chỉ lưu user); có thể mở rộng thêm.
+    - File `users.csv` và `match_history.csv` được tạo tự động nếu chưa tồn tại.
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
-
----
