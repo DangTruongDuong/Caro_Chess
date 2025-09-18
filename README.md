@@ -99,7 +99,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Hiển thị thống kê thắng/thua/hòa và bảng lịch sử các trận đấu của người chơi.
 
 <p align="center">
-  <img src="docs/lichsudau.png" alt="Lịch sử đấu" width="500"/>
+  <img src="assets/lichsudau.png" alt="Lịch sử đấu" width="500"/>
 </p>
 <p align="center">
   <em> Hình 5: Màn hình lịch sử đấu (HistoryFrame) </em>
@@ -109,7 +109,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Popup hiển thị thắng/thua/hòa, cập nhật điểm số.
 
 <p align="center">
-  <img src="docs/thang.png" alt="Kết quả" width="500"/>
+  <img src="assets/thang.png" alt="Kết quả" width="500"/>
 </p>
 <p align="center">
   <em> Hình 6: Popup kết quả trận đấu </em>
@@ -120,14 +120,14 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - `match_history.csv`: Lưu player1,player2,result,timestamp,player1Score,player2Score.
 
 <p align="center">
-  <img src="docs/users_file.png" alt="File users" width="500"/>
+  <img src="assets/users_file.png" alt="File users" width="500"/>
 </p>
 <p align="center">
   <em> Hình 7: File lưu trữ tài khoản người dùng </em>
 </p>
 
 <p align="center">
-  <img src="docs/match_history_file.png" alt="File match history" width="500"/>
+  <img src="assets/match_history_file.png" alt="File match history" width="500"/>
 </p>
 <p align="center">
   <em> Hình 8: File lưu trữ lịch sử trận đấu </em>
