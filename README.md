@@ -195,5 +195,9 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Nếu lỗi kết nối, kiểm tra firewall hoặc port 12345.
     - File `users.csv` và `match_history.csv` được tạo tự động trong thư mục dự án nếu chưa tồn tại.
     - Đảm bảo Eclipse được cấu hình đúng JDK trong **Preferences > Java > Installed JREs**.
-
+## 5. Liên hệ
+- 👤 **Tác giả:** Đặng Trường Dương  
+- 📧 **Email:** dangtruongduong2102@gmail.com  
+- 🌐 **GitHub:** https://github.com/your-username](https://github.com/your-username)](https://github.com/DangTruongDuong)
+- 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
