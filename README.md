@@ -21,14 +21,14 @@
 
 ## 1. Giới thiệu hệ thống
 
-Hệ thống Game Tic Tac Toe (Caro 3x3) được phát triển theo mô hình Client-Server, hỗ trợ chơi multiplayer trực tuyến qua mạng LAN. Người chơi có thể đăng nhập/đăng ký tài khoản, chọn chế độ tạo phòng (làm server) hoặc tham gia phòng (làm client), chơi game với đối thủ, và xem lịch sử đấu cũng như thống kê thắng/thua/hòa. Game sử dụng bàn cờ 3x3 với luật chơi chuẩn: X/O luân phiên, thắng khi có 3 ký tự thẳng hàng (ngang/dọc/chéo), hỗ trợ đầu hàng, chơi lại, và thoát game. Kết quả trận đấu được lưu trữ và cập nhật thống kê người dùng.
+Hệ thống Game Tic Tac Toe (Caro 3x3) được phát triển theo mô hình Client-Server, hỗ trợ chơi multiplayer trực tuyến qua mạng LAN. Người chơi có thể đăng nhập/đăng ký tài khoản, chọn chế độ tạo phòng (làm server) hoặc tham gia phòng (làm client), chơi game với đối thủ, và xem lịch sử đấu cũng như thống kê thắng/thua/hòa. Game sử dụng bàn cờ 3x3 với luật chơi chuẩn: X/O luân phiên, thắng khi có 3 ký tự thẳng hàng (ngang/dọc/chéo), hỗ trợ chơi lại, và thoát game. Kết quả trận đấu được lưu trữ và cập nhật thống kê người dùng.
 
 **Chức năng chính**
 - Đăng nhập/Đăng ký tài khoản (lưu trữ trong file `users.csv` với định dạng username,password,wins,losses,draws).
 - Menu chính: Chọn tên hiển thị, tạo phòng chờ (server) hoặc tham gia phòng bằng IP/Port, xem lịch sử đấu.
 - Ghép cặp người chơi: Server chờ client kết nối, trao đổi tên hiển thị, sau đó bắt đầu game.
-- Chơi Tic Tac Toe: Hiển thị lượt chơi, điểm số, vẽ đường thắng, xử lý thắng/thua/hòa, đầu hàng, chơi lại.
-- Xử lý sự cố: Nếu một bên thoát, bên kia thắng; hỗ trợ chơi lại hoặc đầu hàng.
+- Chơi Tic Tac Toe: Hiển thị lượt chơi, điểm số, vẽ đường thắng, xử lý thắng/thua/hòa, chơi lại.
+- Xử lý sự cố: Nếu một bên thoát, bên kia thắng; hỗ trợ chơi lại.
 - Lịch sử đấu: Lưu kết quả trận đấu trong `match_history.csv` (player1,player2,result,timestamp,player1Score,player2Score), hiển thị thống kê thắng/thua/hòa và bảng lịch sử.
 - Giao diện đồ họa thân thiện với hiệu ứng hover, gradient background, và cập nhật realtime.
 
@@ -118,7 +118,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 </p>
 
 - Màn hình chơi game
-    - Bàn cờ 3x3, hiển thị tên người chơi, lượt đi, điểm số, nút chơi lại/đầu hàng/thoát.
+    - Bàn cờ 3x3, hiển thị tên người chơi, lượt đi, điểm số, nút chơi lại/thoát.
 
 <p align="center">
   <img src="assets/1.png" alt="Màn hình game" width="500"/>
@@ -189,7 +189,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 - Bước 4: Chơi game
     - Hai người chơi kết nối sẽ bắt đầu game tự động.
     - Luân phiên click vào ô bàn cờ để đánh X/O.
-    - Khi kết thúc, kết quả hiển thị; có thể chơi lại, đầu hàng, hoặc thoát.
+    - Khi kết thúc, kết quả hiển thị; có thể chơi lại, hoặc thoát.
 - Lưu ý:
     - Chạy trên cùng mạng LAN để kết nối IP.
     - Nếu lỗi kết nối, kiểm tra firewall hoặc port 12345.
