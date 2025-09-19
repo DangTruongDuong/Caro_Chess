@@ -98,7 +98,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Chọn tên hiển thị, nút Tạo Phòng (server), Tham Gia Phòng (client với IP/Port), Xem Lịch Sử Đấu.
 
 <p align="center">
-  <img src="assets/menu.png" alt="Màn hình menu" width="400"/>
+  <img src="assets/3.png" alt="Màn hình menu" width="400"/>
 </p>
 <p align="center">
   <em> Hình 2: Menu chính (GameMenu) </em>
@@ -111,7 +111,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
   <img src="assets/chuanbitaophong.png" alt="Phòng chờ" width="400"/>
 </p>
 <p align="center">
-  <img src="assets/chotaophong.png" alt="Phòng chờ" width="400"/>
+  <img src="assets/4.png" alt="Phòng chờ" width="400"/>
 </p>
 <p align="center">
   <em> Hình 3: Phòng chờ khi tạo server (WaitingRoomFrame) </em>
@@ -121,7 +121,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Bàn cờ 3x3, hiển thị tên người chơi, lượt đi, điểm số, nút chơi lại/đầu hàng/thoát.
 
 <p align="center">
-  <img src="assets/vogame.png" alt="Màn hình game" width="500"/>
+  <img src="assets/1.png" alt="Màn hình game" width="500"/>
 </p>
 <p align="center">
   <em> Hình 4: Giao diện chơi game (XOGame) với đường thắng </em>
@@ -131,7 +131,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Hiển thị thống kê thắng/thua/hòa và bảng lịch sử các trận đấu của người chơi.
 
 <p align="center">
-  <img src="assets/lichsudau.png" alt="Lịch sử đấu" width="500"/>
+  <img src="assets/2.png" alt="Lịch sử đấu" width="500"/>
 </p>
 <p align="center">
   <em> Hình 5: Màn hình lịch sử đấu (HistoryFrame) </em>
