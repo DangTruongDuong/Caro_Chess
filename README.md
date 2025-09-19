@@ -199,5 +199,5 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 - 👤 **Tác giả:** Đặng Trường Dương  
 - 📧 **Email:** dangtruongduong2102@gmail.com  
 - 🌐 **GitHub:** https://github.com/your-username](https://github.com/your-username)](https://github.com/DangTruongDuong)
-- 
+
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
