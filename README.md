@@ -141,10 +141,10 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     - Popup hiển thị thắng/thua/hòa, cập nhật điểm số.
 
 <p align="center">
-  <img src="assets/thongbaokeq.png" alt="Kết quả" width="500"/>
+  <img src="assets/win.png" alt="Kết quả" width="500"/>
 </p>
 <p align="center">
-  <img src="assets/Thongbaohoaco.png" alt="Kết quả" width="500"/>
+  <img src="assets/hoa.png" alt="Kết quả" width="500"/>
 </p>
 <p align="center">
   <em> Hình 6: Popup kết quả trận đấu </em>
