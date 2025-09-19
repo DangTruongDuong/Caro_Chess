@@ -59,8 +59,6 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
   - `users.csv` → tài khoản & thống kê  
   - `match_history.csv` → lịch sử trận đấu  
 
----
-
 ### 🏗️ Kiến trúc
 - **Client**
   - `LoginFrame.java` → đăng nhập  
