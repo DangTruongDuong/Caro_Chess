@@ -35,6 +35,20 @@ Hệ thống Game Tic Tac Toe (Caro 3x3) được phát triển theo mô hình C
 Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quản lý trạng thái game, và lưu trữ dữ liệu CSV.
 
 ## 2. Công nghệ sử dụng
+<p align="center">
+  <a href="https://www.java.com/">
+    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  </a>
+  <a href="https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html">
+    <img src="https://img.shields.io/badge/JDK-8+-green?style=for-the-badge" />
+  </a>
+  <a href="https://docs.oracle.com/javase/tutorial/networking/sockets/index.html">
+    <img src="https://img.shields.io/badge/TCP-Socket-blue?style=for-the-badge" />
+  </a>
+  <a href="https://docs.oracle.com/javase/tutorial/uiswing/">
+    <img src="https://img.shields.io/badge/Java-Swing-orange?style=for-the-badge" />
+  </a>
+</p>
 - Ngôn ngữ lập trình: Java (JDK 8+).
 - Giao diện người dùng: Java Swing (JFrame, JButton, JLabel, JPanel, JPasswordField, JTable cho lịch sử).
 - Truyền thông mạng: TCP Socket (ServerSocket cho server, Socket cho client).
