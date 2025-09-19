@@ -55,26 +55,6 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 - **Ngôn ngữ lập trình:** Java (JDK 8+).  
 - **Giao diện người dùng:** Java Swing (`JFrame`, `JButton`, `JLabel`, `JPanel`, `JPasswordField`, `JTable` cho lịch sử).  
 - **Truyền thông mạng:** TCP Socket (`ServerSocket` cho server, `Socket` cho client).  
-- **Lưu trữ dữ liệu:** File CSV  
-  - `users.csv` → tài khoản & thống kê  
-  - `match_history.csv` → lịch sử trận đấu  
-
-### 🏗️ Kiến trúc
-- **Client**
-  - `LoginFrame.java` → đăng nhập  
-  - `RegisterFrame.java` → đăng ký  
-  - `GameMenu.java` → menu chính (chứa `WaitingRoomFrame` & `HistoryFrame`)  
-  - `Client.java` → xử lý kết nối server  
-  - `XOGame.java` → giao diện game  
-
-- **Server**
-  - `Server.java` → khởi tạo server & phòng chờ  
-  - `XOGame.java` → quản lý game phía server  
-
-- **Các tính năng phụ**
-  - `Thread` để lắng nghe đối thủ  
-  - `DataInputStream` / `DataOutputStream` để trao đổi dữ liệu (`move`, `name`, `reset`, `surrender`, `exit`)  
-  - `BufferedReader` / `BufferedWriter` để xử lý CSV  
 
 ## 3. Hình ảnh các chức năng
 - Màn hình đăng nhập/đăng ký
