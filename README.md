@@ -1,8 +1,5 @@
-<h2 align="center">
-    <a href="https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin">
-    🎓 Faculty of Information Technology (DaiNam University)
-    </a>
-</h2>
+# 🎓 Faculty of Information Technology (DaiNam University)
+
 <h2 align="center">
    GAME TIC TAC TOE 3x3
 </h2>
@@ -14,23 +11,24 @@
     </p>
 
 [![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
-[![Faculty of Information Technology](https://img.shields.io/badge/Faculty%20of%20Information%20Technology-blue?style=for-the-badge)](https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin)
-[![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style=for-the-badge)](https://dainam.edu.vn)
+[![Faculty of Information Technology](https://img.shields.io/badge/Faculty%20of%20Information%20Technology-blue?style-for-the-badge)](https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin)
+[![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style-for-the-badge)](https://dainam.edu.vn)
 
 </div>
 
 ## 1. Giới thiệu hệ thống
 
-Hệ thống Game Tic Tac Toe (Caro 3x3) được phát triển theo mô hình Client-Server, hỗ trợ chơi multiplayer trực tuyến qua mạng LAN. Người chơi có thể đăng nhập/đăng ký tài khoản, chọn chế độ tạo phòng (làm server) hoặc tham gia phòng (làm client), chơi game với đối thủ, và xem lịch sử đấu cũng như thống kê thắng/thua/hòa. Game sử dụng bàn cờ 3x3 với luật chơi chuẩn: X/O luân phiên, thắng khi có 3 ký tự thẳng hàng (ngang/dọc/chéo), hỗ trợ chơi lại, và thoát game. Kết quả trận đấu được lưu trữ và cập nhật thống kê người dùng.
+Hệ thống Game Tic Tac Toe (Caro 3x3) được phát triển theo mô hình Client-Server, hỗ trợ chơi multiplayer trực tuyến qua mạng LAN. Người chơi có thể đăng nhập/đăng ký tài khoản, chọn tên hiển thị, tạo phòng (làm server) hoặc tham gia phòng (làm client), chơi game với đối thủ, xem lịch sử đấu, và xem bảng xếp hạng. Game sử dụng bàn cờ 3x3 với luật chơi chuẩn: X/O luân phiên, thắng khi có 3 ký tự thẳng hàng (ngang/dọc/chéo), hỗ trợ chơi lại và thoát game. Kết quả trận đấu được lưu trữ và cập nhật thống kê người dùng.
 
 **Chức năng chính**
-- Đăng nhập/Đăng ký tài khoản (lưu trữ trong file `users.csv` với định dạng username,password,wins,losses,draws).
-- Menu chính: Chọn tên hiển thị, tạo phòng chờ (server) hoặc tham gia phòng bằng IP/Port, xem lịch sử đấu.
-- Ghép cặp người chơi: Server chờ client kết nối, trao đổi tên hiển thị, sau đó bắt đầu game.
-- Chơi Tic Tac Toe: Hiển thị lượt chơi, điểm số, vẽ đường thắng, xử lý thắng/thua/hòa, chơi lại.
-- Xử lý sự cố: Nếu một bên thoát, bên kia thắng; hỗ trợ chơi lại.
-- Lịch sử đấu: Lưu kết quả trận đấu trong `match_history.csv` (player1,player2,result,timestamp,player1Score,player2Score), hiển thị thống kê thắng/thua/hòa và bảng lịch sử.
-- Giao diện đồ họa thân thiện với hiệu ứng hover, gradient background, và cập nhật realtime.
+- **Đăng nhập/Đăng ký tài khoản**: Lưu trữ trong file `users.csv` (username,password,wins,losses,draws), ngăn đăng nhập đồng thời từ nhiều nơi.
+- **Menu chính**: Chọn tên hiển thị, tạo phòng, tham gia phòng bằng IP, xem lịch sử đấu, xem bảng xếp hạng, đăng xuất.
+- **Ghép cặp người chơi**: Server chờ client kết nối, trao đổi tên hiển thị, bắt đầu game.
+- **Chơi Tic Tac Toe**: Hiển thị lượt chơi, điểm số, vẽ đường thắng, xử lý thắng/thua/hòa, hỗ trợ chơi lại.
+- **Xử lý sự cố**: Nếu một bên thoát, bên còn lại thắng; hỗ trợ chơi lại sau khi kết thúc ván.
+- **Lịch sử đấu**: Lưu kết quả trận đấu trong `match_history.csv` (player1,player2,result,timestamp), hiển thị thống kê thắng/thua/hòa.
+- **Bảng xếp hạng**: Hiển thị top người chơi theo số trận thắng và tỷ lệ thắng, đồng bộ từ lịch sử đấu.
+- **Giao diện đồ họa**: Sử dụng Java Swing với hiệu ứng gradient background, hover cho nút, và focus cho ô nhập liệu.
 
 Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quản lý trạng thái game, và lưu trữ dữ liệu CSV.
 
@@ -40,26 +38,24 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
   </a>
   <a href="https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html">
-    <img src="https://img.shields.io/badge/JDK-8+-green?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/JDK-8+-green?style-for-the-badge" />
   </a>
   <a href="https://docs.oracle.com/javase/tutorial/networking/sockets/index.html">
-    <img src="https://img.shields.io/badge/TCP-Socket-blue?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/TCP-Socket-blue?style-for-the-badge" />
   </a>
   <a href="https://docs.oracle.com/javase/tutorial/uiswing/">
-    <img src="https://img.shields.io/badge/Java-Swing-orange?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Java-Swing-orange?style-for-the-badge" />
   </a>
 </p>
 
----
-
-- **Ngôn ngữ lập trình:** Java (JDK 8+).  
-- **Giao diện người dùng:** Java Swing (`JFrame`, `JButton`, `JLabel`, `JPanel`, `JPasswordField`, `JTable` cho lịch sử).  
-- **Truyền thông mạng:** TCP Socket (`ServerSocket` cho server, `Socket` cho client).  
+- **Ngôn ngữ lập trình**: Java (JDK 8+).  
+- **Giao diện người dùng**: Java Swing (`JFrame`, `JButton`, `JLabel`, `JPanel`, `JPasswordField`, `JTable` cho lịch sử và bảng xếp hạng).  
+- **Truyền thông mạng**: TCP Socket (`ServerSocket` cho server, `Socket` cho client).  
 
 ## 3. Hình ảnh các chức năng
-- Màn hình đăng nhập/đăng ký
-    - Nhập username/password, kiểm tra regex (username: 3-20 ký tự chữ cái/số/underscore; password: ít nhất 6 ký tự với chữ hoa/thường/số/ký tự đặc biệt).
 
+- **Màn hình đăng nhập**  
+  Nhập username/password, kiểm tra regex (username: 3-20 ký tự chữ cái/số/underscore; password: ít nhất 6 ký tự với chữ hoa/thường/số/ký tự đặc biệt).
 <p align="center">
   <img src="assets/dn.png" alt="Màn hình đăng nhập" width="400"/>
 </p>
@@ -67,26 +63,26 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
   <em> Hình 1: Màn hình đăng nhập (LoginFrame) </em>
 </p>
 
+- **Màn hình đăng ký**  
+  Nhập username, password, xác nhận password, kiểm tra định dạng và trùng lặp tài khoản.
 <p align="center">
   <img src="assets/dk.png" alt="Màn hình đăng ký" width="400"/>
 </p>
 <p align="center">
-  <em> Hình 1.1: Màn hình đăng ký (RegisterFrame) </em>
+  <em> Hình 2: Màn hình đăng ký (RegisterFrame) </em>
 </p>
 
-- Màn hình menu chính
-    - Chọn tên hiển thị, nút Tạo Phòng (server), Tham Gia Phòng (client với IP/Port), Xem Lịch Sử Đấu.
-
+- **Màn hình menu chính**  
+  Chọn tên hiển thị, nút Tạo Phòng, Tham Gia Phòng (nhập IP), Xem Lịch Sử Đấu, Xem Bảng Xếp Hạng, Đăng xuất.
 <p align="center">
   <img src="assets/3.png" alt="Màn hình menu" width="400"/>
 </p>
 <p align="center">
-  <em> Hình 2: Menu chính (GameMenu) </em>
+  <em> Hình 3: Menu chính (GameMenu) </em>
 </p>
 
-- Màn hình phòng chờ (khi tạo phòng)
-    - Hiển thị thông tin IP/Port để chia sẻ, chờ client kết nối.
-
+- **Màn hình phòng chờ (khi tạo phòng)**  
+  Hiển thị thông tin chờ client kết nối, nút Hủy để quay lại menu.
 <p align="center">
   <img src="assets/chuanbitaophong.png" alt="Phòng chờ" width="400"/>
 </p>
@@ -94,90 +90,102 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
   <img src="assets/4.png" alt="Phòng chờ" width="400"/>
 </p>
 <p align="center">
-  <em> Hình 3: Phòng chờ khi tạo server (WaitingRoomFrame) </em>
+  <em> Hình 4: Phòng chờ khi tạo server (WaitingRoomFrame) </em>
 </p>
 
-- Màn hình chơi game
-    - Bàn cờ 3x3, hiển thị tên người chơi, lượt đi, điểm số, nút chơi lại/thoát.
-
+- **Màn hình chơi game**  
+  Bàn cờ 3x3, hiển thị tên người chơi, lượt đi, điểm số, nút chơi lại/thoát.
 <p align="center">
   <img src="assets/1.png" alt="Màn hình game" width="500"/>
 </p>
 <p align="center">
-  <em> Hình 4: Giao diện chơi game (XOGame) với đường thắng </em>
+  <em> Hình 5: Giao diện chơi game (XOGame) với đường thắng </em>
 </p>
 
-- Màn hình lịch sử đấu
-    - Hiển thị thống kê thắng/thua/hòa và bảng lịch sử các trận đấu của người chơi.
-
+- **Màn hình lịch sử đấu**  
+  Hiển thị thống kê thắng/thua/hòa và bảng lịch sử các trận đấu của người chơi.
 <p align="center">
   <img src="assets/2.png" alt="Lịch sử đấu" width="500"/>
 </p>
 <p align="center">
-  <em> Hình 5: Màn hình lịch sử đấu (HistoryFrame) </em>
+  <em> Hình 6: Màn hình lịch sử đấu (HistoryFrame) </em>
 </p>
 
-- Thông báo kết quả
-    - Popup hiển thị thắng/thua/hòa, cập nhật điểm số.
-
+- **Màn hình bảng xếp hạng**  
+  Hiển thị top người chơi theo số trận thắng và tỷ lệ thắng.
 <p align="center">
-  <img src="assets/win.png" alt="Kết quả" width="500"/>
-</p>
-<p align="center">
-  <img src="assets/hoa.png" alt="Kết quả" width="500"/>
+  <img src="assets/leaderboard.png" alt="Bảng xếp hạng" width="500"/>
 </p>
 <p align="center">
-  <em> Hình 6: Popup kết quả trận đấu </em>
+  <em> Hình 7: Màn hình bảng xếp hạng (LeaderboardFrame) </em>
 </p>
 
-- File lưu trữ
-    - `users.csv`: Lưu username,password,wins,losses,draws.
-    - `match_history.csv`: Lưu player1,player2,result,timestamp,player1Score,player2Score.
+- **Thông báo kết quả**  
+  Popup hiển thị thắng/thua/hòa, cập nhật điểm số.
+<p align="center">
+  <img src="assets/win.png" alt="Kết quả thắng" width="500"/>
+</p>
+<p align="center">
+  <img src="assets/hoa.png" alt="Kết quả hòa" width="500"/>
+</p>
+<p align="center">
+  <em> Hình 8: Popup kết quả trận đấu </em>
+</p>
 
+- **File lưu trữ**  
+  - `users.csv`: Lưu username,password,wins,losses,draws.  
+  - `match_history.csv`: Lưu player1,player2,result,timestamp.
 <p align="center">
   <img src="assets/taikhoandata.png" alt="File users" width="500"/>
 </p>
 <p align="center">
-  <em> Hình 7: File lưu trữ tài khoản người dùng </em>
+  <em> Hình 9: File lưu trữ tài khoản người dùng </em>
 </p>
-
 <p align="center">
   <img src="assets/lichsudata.png" alt="File match history" width="500"/>
 </p>
 <p align="center">
-  <em> Hình 8: File lưu trữ lịch sử trận đấu </em>
+  <em> Hình 10: File lưu trữ lịch sử trận đấu </em>
 </p>
 
 ## 4. Cài đặt & chạy chương trình
-- Bước 1: Chuẩn bị môi trường
-    - Cài đặt Eclipse IDE for Java Developers (hoặc phiên bản Eclipse hỗ trợ Java).
-    - Cài đặt Java JDK 8+.
-    - Kiểm tra JDK bằng lệnh trong terminal: `java -version`.
-- Bước 2: Thiết lập dự án trong Eclipse
-    - Mở Eclipse, chọn **File > New > Java Project**.
-    - Đặt tên dự án (ví dụ: `TicTacToe`) và nhấn **Finish**.
-    - Sao chép thư mục `caro` chứa các file mã nguồn (`LoginFrame.java`, `RegisterFrame.java`, `GameMenu.java`, `Server.java`, `Client.java`, `XOGame.java`) vào thư mục dự án trong Eclipse.
-    - Nhấn chuột phải vào dự án trong **Package Explorer**, chọn **Refresh** để cập nhật các file.
-- Bước 3: Chạy chương trình
-    - Trong Eclipse, mở file `caro/LoginFrame.java`.
-    - Nhấn chuột phải vào file, chọn **Run As > Java Application** để khởi động màn hình đăng nhập.
-    - Đăng nhập hoặc đăng ký tài khoản.
-    - Trong menu chính:
-        - Chọn **Tạo Phòng** để làm server (port mặc định 12345, chia sẻ IP cho người khác).
-        - Hoặc chọn **Tham Gia Phòng**, nhập IP/Port của server để kết nối.
-        - Hoặc chọn **Xem Lịch Sử Đấu** để xem thống kê và lịch sử các trận đấu.
-- Bước 4: Chơi game
-    - Hai người chơi kết nối sẽ bắt đầu game tự động.
-    - Luân phiên click vào ô bàn cờ để đánh X/O.
-    - Khi kết thúc, kết quả hiển thị; có thể chơi lại, hoặc thoát.
-- Lưu ý:
-    - Chạy trên cùng mạng LAN để kết nối IP.
-    - Nếu lỗi kết nối, kiểm tra firewall hoặc port 12345.
-    - File `users.csv` và `match_history.csv` được tạo tự động trong thư mục dự án nếu chưa tồn tại.
-    - Đảm bảo Eclipse được cấu hình đúng JDK trong **Preferences > Java > Installed JREs**.
+
+- **Bước 1: Chuẩn bị môi trường**  
+  - Cài đặt Eclipse IDE for Java Developers.  
+  - Cài đặt Java JDK 8+.  
+  - Kiểm tra JDK bằng lệnh trong terminal: `java -version`.
+
+- **Bước 2: Thiết lập dự án trong Eclipse**  
+  - Mở Eclipse, chọn **File > New > Java Project**.  
+  - Đặt tên dự án (ví dụ: `TicTacToe`) và nhấn **Finish**.  
+  - Sao chép thư mục `caro` chứa các file mã nguồn (`LoginFrame.java`, `RegisterFrame.java`, `GameMenu.java`, `Server.java`, `Client.java`, `XOGame.java`, `SessionManager.java`, `HistoryFrame.java`, `LeaderboardFrame.java`, `WaitingRoomFrame.java`) vào thư mục dự án trong Eclipse.  
+  - Nhấn chuột phải vào dự án trong **Package Explorer**, chọn **Refresh** để cập nhật các file.
+
+- **Bước 3: Chạy chương trình**  
+  - Mở file `caro/LoginFrame.java` trong Eclipse.  
+  - Nhấn chuột phải vào file, chọn **Run As > Java Application** để khởi động màn hình đăng nhập.  
+  - Đăng nhập hoặc đăng ký tài khoản.  
+  - Trong menu chính:  
+    - Chọn **Tạo Phòng** để làm server (port mặc định 12345).  
+    - Hoặc chọn **Tham Gia Phòng**, nhập IP của server để kết nối.  
+    - Hoặc chọn **Xem Lịch Sử Đấu** để xem thống kê và lịch sử các trận đấu.  
+    - Hoặc chọn **Xem Bảng Xếp Hạng** để xem top người chơi.  
+    - Hoặc chọn **Đăng xuất** để quay về màn hình đăng nhập.
+
+- **Bước 4: Chơi game**  
+  - Hai người chơi kết nối sẽ bắt đầu game tự động.  
+  - Luân phiên click vào ô bàn cờ để đánh X/O.  
+  - Khi kết thúc, kết quả hiển thị; có thể chơi lại hoặc thoát.
+
+- **Lưu ý**:  
+  - Chạy trên cùng mạng LAN để kết nối IP.  
+  - Nếu lỗi kết nối, kiểm tra firewall hoặc port 12345.  
+  - File `users.csv`, `match_history.csv`, và `active_sessions.txt` được tạo tự động trong thư mục dự án nếu chưa tồn tại.  
+  - Đảm bảo Eclipse được cấu hình đúng JDK trong **Preferences > Java > Installed JREs**.  
+
 ## 5. Liên hệ
-- 👤 **Tác giả:** Đặng Trường Dương  
-- 📧 **Email:** dangtruongduong2102@gmail.com  
-- 🌐 **GitHub:** https://github.com/your-username](https://github.com/your-username)](https://github.com/DangTruongDuong)
+- 👤 **Tác giả**: Đặng Trường Dương  
+- 📧 **Email**: dangtruongduong2102@gmail.com  
+- 🌐 **GitHub**: [https://github.com/DangTruongDuong](https://github.com/DangTruongDuong)
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
