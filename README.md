@@ -75,7 +75,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 - **Màn hình menu chính**  
   Chọn tên hiển thị, nút Tạo Phòng, Tham Gia Phòng (nhập IP), Xem Lịch Sử Đấu, Xem Bảng Xếp Hạng, Đăng xuất.
 <p align="center">
-  <img src="assets/3.png" alt="Màn hình menu" width="400"/>
+  <img src="assets/mn.png" alt="Màn hình menu" width="400"/>
 </p>
 <p align="center">
   <em> Hình 3: Menu chính (GameMenu) </em>
@@ -87,7 +87,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
   <img src="assets/chuanbitaophong.png" alt="Phòng chờ" width="400"/>
 </p>
 <p align="center">
-  <img src="assets/4.png" alt="Phòng chờ" width="400"/>
+  <img src="assets/wait.png" alt="Phòng chờ" width="400"/>
 </p>
 <p align="center">
   <em> Hình 4: Phòng chờ khi tạo server (WaitingRoomFrame) </em>
@@ -96,7 +96,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 - **Màn hình chơi game**  
   Bàn cờ 3x3, hiển thị tên người chơi, lượt đi, điểm số, nút chơi lại/thoát.
 <p align="center">
-  <img src="assets/1.png" alt="Màn hình game" width="500"/>
+  <img src="assets/ui.png" alt="Màn hình game" width="500"/>
 </p>
 <p align="center">
   <em> Hình 5: Giao diện chơi game (XOGame) với đường thắng </em>
@@ -105,7 +105,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 - **Màn hình lịch sử đấu**  
   Hiển thị thống kê thắng/thua/hòa và bảng lịch sử các trận đấu của người chơi.
 <p align="center">
-  <img src="assets/2.png" alt="Lịch sử đấu" width="500"/>
+  <img src="assets/ls.png" alt="Lịch sử đấu" width="500"/>
 </p>
 <p align="center">
   <em> Hình 6: Màn hình lịch sử đấu (HistoryFrame) </em>
@@ -114,7 +114,7 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 - **Màn hình bảng xếp hạng**  
   Hiển thị top người chơi theo số trận thắng và tỷ lệ thắng.
 <p align="center">
-  <img src="assets/leaderboard.png" alt="Bảng xếp hạng" width="500"/>
+  <img src="assets/xh.png" alt="Bảng xếp hạng" width="500"/>
 </p>
 <p align="center">
   <em> Hình 7: Màn hình bảng xếp hạng (LeaderboardFrame) </em>
@@ -123,10 +123,10 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
 - **Thông báo kết quả**  
   Popup hiển thị thắng/thua/hòa, cập nhật điểm số.
 <p align="center">
-  <img src="assets/win.png" alt="Kết quả thắng" width="500"/>
+  <img src="assets/w.png" alt="Kết quả thắng" width="500"/>
 </p>
 <p align="center">
-  <img src="assets/hoa.png" alt="Kết quả hòa" width="500"/>
+  <img src="assets/d.png" alt="Kết quả hòa" width="500"/>
 </p>
 <p align="center">
   <em> Hình 8: Popup kết quả trận đấu </em>
