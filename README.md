@@ -38,13 +38,13 @@ Dự án tập trung vào lập trình mạng (socket), giao diện Swing, quả
     <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
   </a>
   <a href="https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html">
-    <img src="https://img.shields.io/badge/JDK-8+-green?style-for-the-badge" />
+    <img src="https://img.shields.io/badge/JDK-8+-green?style=for-the-badge" />
   </a>
   <a href="https://docs.oracle.com/javase/tutorial/networking/sockets/index.html">
-    <img src="https://img.shields.io/badge/TCP-Socket-blue?style-for-the-badge" />
+    <img src="https://img.shields.io/badge/TCP-Socket-blue?style=for-the-badge" />
   </a>
   <a href="https://docs.oracle.com/javase/tutorial/uiswing/">
-    <img src="https://img.shields.io/badge/Java-Swing-orange?style-for-the-badge" />
+    <img src="https://img.shields.io/badge/Java-Swing-orange?style=for-the-badge" />
   </a>
 </p>
 
