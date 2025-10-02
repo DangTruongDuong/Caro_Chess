@@ -1,7 +1,7 @@
 # 🎓 Faculty of Information Technology (DaiNam University)
 
 <h2 align="center">
-   GAME TIC TAC TOE 3x3
+   GAME TIC TAC TOE 3x3 (CARO 3x3)
 </h2>
 <div align="center">
     <p align="center">
